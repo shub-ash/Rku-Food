@@ -1,115 +1,169 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
+import bannerIamge from "../../public/images/bannerImage.png";
+import Products from "@/components/products";
+import FeaturedProducts from "@/components/featuredProducts";
+import food1 from "../../public/images/insta1.png";
+import food2 from "../../public/images/insta2.png";
+import food3 from "../../public/images/insta3.png";
+import Footer from "@/components/footer";
 
 export default function Home() {
+  const trustPoints = [
+    {
+      icon: "🚚",
+      title: "Free Shipping PAN India",
+      desc: "Free shipping on prepaid order",
+    },
+    {
+      icon: "🔒",
+      title: "100% Secure Payment",
+      desc: "We ensure secure payment",
+    },
+    {
+      icon: "📞",
+      title: "24/7 Customer Support",
+      desc: "We have 24/7 dedicated support",
+    },
+  ];
+
+  const images = [food1, food2, food3, food1, food2, food1];
+
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <section className="relative w-full bg-white">
+      <div className="relative h-[700px] w-full">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src={bannerIamge}
+          alt="RKU Masala Banner"
+          layout="fill"
+          objectFit="cover"
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="absolute inset-0 bg-transparent bg-opacity-30 flex items-center w-10/12 mx-auto">
+          <div className=" text-white px-6 w-1/3">
+            <h1 className="text-4xl md:text-xl font-bold mb-4 text-secondary">
+              Welcome to RKU Masala
+            </h1>
+            <p className="text-lg md:text-5xl mb-6 italic">
+              Bringing Tradition to Your Kitchen
+            </p>
+            <Link href="/shop">
+              <button className="hover:bg-[#30ad1f] cursor-pointer bg-[#f2f2f2]  text-black hover:text-white font-semibold px-6 py-2 rounded-3xl shadow">
+                Shop Now
+              </button>
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+
+      <Products />
+      <FeaturedProducts />
+
+      <section className="bg-gray-100 py-8 px-4 ">
+        <h2 className="text-4xl font-semibold text-center">
+          Pay with Confidence, Receive with Trust
+        </h2>
+        <div className="grid lg:grid-cols-3 gap-16  w-10/12 mx-auto text-center">
+          {trustPoints.map((point, idx) => (
+            <div
+              key={idx}
+              className="bg-white px-16 py-8 rounded-xl mt-7  shadow"
+            >
+              <div className="text-3xl mb-2">{point.icon}</div>
+              <h3 className="font-semibold text-lg">{point.title}</h3>
+              <p className="text-lg text-gray-600 mt-1">{point.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-4 py-10 bg-white w-10/12 mx-auto">
+        <h2 className="text-4xl font-semibold text-center mb-6">
+          Follow us on <span className="text-primary">Instagram</span>
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 w-full gap-4 mt-10">
+          {images.map((src, idx) => (
+            <div key={idx} className="relative h-32 w-full">
+              <Image
+                src={src}
+                alt={`Instagram ${idx + 1}`}
+                layout="fill"
+                objectFit="cover"
+                className="rounded"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="w-full">
+        {/* Newsletter */}
+        <section className="bg-[#f9f9f9] py-10 px-6">
+          <div className="w-10/12 mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Left Content */}
+            <div>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+                Subscribe our Newsletter
+              </h3>
+              <p className="mt-1 text-sm text-gray-500">
+                Get the taste of tradition in your inbox — Sign up now!
+              </p>
+            </div>
+
+            {/* Right Content: Input + Button + Social */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                // handle submit
+              }}
+              className="flex items-center gap-3 w-full md:w-auto"
+            >
+              {/* Input + Button */}
+              <div className="flex w-full md:w-96">
+                <input
+                  type="email"
+                  aria-label="Your email address"
+                  placeholder="Your email address"
+                  className="flex-1 border border-gray-300 px-4 py-3 text-sm rounded-l-md focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  className="bg-primary hover:bg-red-700 text-white px-6 py-3 text-sm font-semibold rounded-r-md"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              {/* Social Icons */}
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  aria-label="Follow on Facebook"
+                  className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90"
+                >
+                  f
+                </button>
+                <button
+                  type="button"
+                  aria-label="Follow on Twitter"
+                  className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90"
+                >
+                  t
+                </button>
+                <button
+                  type="button"
+                  aria-label="Follow on Instagram"
+                  className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90"
+                >
+                  ig
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
       </footer>
-    </div>
+
+      <Footer />
+    </section>
   );
 }
