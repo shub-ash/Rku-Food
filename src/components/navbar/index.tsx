@@ -4,6 +4,7 @@ import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "../../../public/images/logo.png";
 import Image from "next/image";
+import user from "../../../public/icons/userIcon.svg";
 
 export default function Navbar() {
   const { state } = useCart();
@@ -38,7 +39,11 @@ export default function Navbar() {
                 </motion.span>
               )}
             </Link>
-            <span className="cursor-pointer">🔐 Login</span>
+            <Link className="cursor-pointer" href="/sign-in">
+              <div className="flex justify-center items-center gap-1">
+                <Image src={user} alt="user" className="h-7" /> Login
+              </div>
+            </Link>
           </div>
         </div>
       </header>
