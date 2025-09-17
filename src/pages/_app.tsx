@@ -3,18 +3,19 @@ import Navbar from "@/components/navbar";
 import { CartProvider } from "@/context/cartContext";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Rancho } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const rancho = Rancho({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-rancho",
+  weight: ["400"], // <-- should be an array of strings
+  variable: "--font-poppins",
+  display: "swap",
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className={rancho.variable}>
+      <div className={poppins.variable}>
         <CartProvider>
           <Navbar />
           <Component {...pageProps} />

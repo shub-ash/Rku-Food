@@ -70,7 +70,6 @@ const Products = () => {
           Introducing <span className="text-primary">Our Products</span>
         </h2>
 
-        {/* Category Tabs */}
         <div className="flex justify-center space-x-4 mb-8">
           {categories.map((cat) => (
             <button
@@ -87,7 +86,6 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 bg-white md:w-10/12 mx-auto ">
           {filteredProducts.map((product, index) => (
             <div
@@ -110,7 +108,7 @@ const Products = () => {
                 )}
               </div>
               <div className="px-2 py-4">
-                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <h3 className="text-lg font-medium">{product.name}</h3>
                 <p className="text-sm">{product.weight}</p>
                 <p className="font-bold mt-2">₹{product.price.toFixed(2)}</p>
               </div>

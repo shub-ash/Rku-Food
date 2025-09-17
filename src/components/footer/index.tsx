@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="w-full">
         {/* Newsletter */}
         <section className="bg-[#f9f9f9] py-10 px-4">
-          <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="w-full lg:w-10/12 mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="w-full md:w-auto text-center md:text-left">
               <h3 className="text-lg md:text-xl font-semibold text-gray-900">

@@ -1,17 +1,33 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
+  const [signedIn, setSignedIn] = useState(true);
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate sign-in success
+    setSignedIn(true);
+  };
+
+  // Redirect to profile page if signed in
+  React.useEffect(() => {
+    if (signedIn) {
+      router.push("/profile");
+    }
+  }, [signedIn, router]);
 
   return (
-    <div className="min-h-[600px] mt-20 flex items-center justify-center bg-white">
+    <div className="min-h-[400px] mt-40 flex items-center justify-center bg-white">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
         <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">
           Sign In
         </h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
               type="email"
@@ -45,7 +61,7 @@ export default function SignIn() {
           </div>
           <button
             type="submit"
-            className="w-full bg-secondary hover:bg-green-700 text-white font-semibold py-2 rounded-full transition"
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-full transition"
           >
             Login
           </button>

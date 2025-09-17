@@ -34,7 +34,7 @@ const AboutUs = () => {
         />
       </div>
 
-      <div className="w-full md:w-3/5">
+      <div className=" md:w-3/5 w-11/12 mx-auto md:mx-0">
         <h2 className="text-3xl md:text-4xl font-medium">
           About RKU Home Food
         </h2>
