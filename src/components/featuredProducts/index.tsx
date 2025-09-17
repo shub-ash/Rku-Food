@@ -45,8 +45,8 @@ const FeaturedProducts = () => {
   ];
   return (
     <section className="px-4 py-8 ">
-      <h2 className="text-4xl font-semibold text-center mb-12">
-        Featured Products
+      <h2 className="text-4xl font-semibold text-center mb-6">
+        Featured <span className="text-primary">Products</span>
       </h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 w-10/12 mx-auto gap-6 mb-8">
@@ -69,13 +69,13 @@ const FeaturedProducts = () => {
                 </span>
               )}
             </div>
-            <h3 className="text-sm font-semibold px-2 rounded transition">
+            <h3 className="text-lg font-normal px-2 rounded transition">
               {product.name}
             </h3>
             <p className="text-xs text-gray-600 px-2 rounded transition">
               {product.weight}
             </p>
-            <p className="font-bold text-sm mt-1 px-2 rounded transition">
+            <p className="font-bold text-lg mt-1 px-2 rounded transition">
               ₹{product.price.toFixed(2)}
             </p>
           </div>

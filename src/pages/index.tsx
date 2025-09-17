@@ -62,8 +62,11 @@ export default function Home() {
       <FeaturedProducts />
 
       <section className="bg-gray-100 py-8 px-4 ">
-        <h2 className="text-4xl font-semibold text-center">
-          Pay with Confidence, Receive with Trust
+        <h2 className="text-4xl font-semibold text-center"></h2>
+
+        <h2 className="text-4xl font-semibold text-center mb-6">
+          Pay with <span className="text-primary"> Confidence,</span> Receive
+          with <span className="text-primary">Trust</span>
         </h2>
         <div className="grid lg:grid-cols-3 gap-16  w-10/12 mx-auto text-center">
           {trustPoints.map((point, idx) => (

@@ -108,7 +108,7 @@ const Products = () => {
                 )}
               </div>
               <div className="px-2 py-4">
-                <h3 className="text-lg font-medium">{product.name}</h3>
+                <h3 className="text-lg font-normal">{product.name}</h3>
                 <p className="text-sm">{product.weight}</p>
                 <p className="font-bold mt-2">₹{product.price.toFixed(2)}</p>
               </div>
