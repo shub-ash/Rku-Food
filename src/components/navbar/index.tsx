@@ -2,6 +2,8 @@ import { useCart } from "@/context/cartContext";
 import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
+import logo from "../../../public/images/logo.png";
+import Image from "next/image";
 
 export default function Navbar() {
   const { state } = useCart();
@@ -41,20 +43,25 @@ export default function Navbar() {
         </div>
       </header>
 
-      <nav className="hover:!text-secondary text-[#808080] font-medium bg-[#F2F2F2] px-4 py-2  w-full  fixed top-14 w- z-50">
-        <div className="flex gap-10 justify-end w-9/12 mx-auto ">
-          <Link href="/" className="hover:text-[#30AD1F]">
-            Home
-          </Link>
-          <Link href="/" className="hover:text-[#30AD1F]">
-            Shop
-          </Link>
-          <Link href="/" className="hover:text-[#30AD1F]">
-            About Us
-          </Link>
-          <Link href="/" className="hover:text-[#30AD1F]">
-            Contact Us
-          </Link>
+      <nav className="hover:!text-secondary text-[#808080] font-medium bg-[#F2F2F2] px-4 py-2  w-full   fixed top-14 w- z-50">
+        <div className="flex gap-10 justify-between items-center w-10/12 mx-auto h-[40px]">
+          <div className="">
+            <Image src={logo} alt="RKU Foods" height={100} />
+          </div>
+          <div className="flex gap-8 text-lg">
+            <Link href="/" className="hover:text-[#30AD1F]">
+              Home
+            </Link>
+            <Link href="/" className="hover:text-[#30AD1F]">
+              Shop
+            </Link>
+            <Link href="/about-us" className="hover:text-[#30AD1F]">
+              About Us
+            </Link>
+            <Link href="/" className="hover:text-[#30AD1F]">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </nav>
     </>

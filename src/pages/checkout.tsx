@@ -214,28 +214,6 @@ export default function Checkout() {
           </div>
         </form>
       </div>
-
-      {/* Newsletter */}
-      <div className="bg-gray-100 py-8 mt-10">
-        <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-4">
-          <div>
-            <h3 className="font-semibold">Subscribe our Newsletter</h3>
-            <p className="text-sm text-gray-500">
-              Get the taste of tradition in your inbox — Sign up now!
-            </p>
-          </div>
-          <div className="flex w-full md:w-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="border rounded-l-md p-3 flex-1"
-            />
-            <button className="bg-red-600 hover:bg-red-700 text-white px-6 rounded-r-md">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

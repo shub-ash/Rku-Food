@@ -40,7 +40,7 @@ export default function Home() {
           priority
         />
         <div className="absolute inset-0 bg-transparent bg-opacity-30 flex items-center w-10/12 mx-auto">
-          <div className=" text-white px-6 w-1/3">
+          <div className=" text-white px-6 lg:w-1/3">
             <h1 className="text-4xl md:text-xl font-bold mb-4 text-secondary">
               Welcome to RKU Masala
             </h1>
@@ -95,75 +95,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <footer className="w-full">
-        {/* Newsletter */}
-        <section className="bg-[#f9f9f9] py-10 px-6">
-          <div className="w-10/12 mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Left Content */}
-            <div>
-              <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                Subscribe our Newsletter
-              </h3>
-              <p className="mt-1 text-sm text-gray-500">
-                Get the taste of tradition in your inbox — Sign up now!
-              </p>
-            </div>
-
-            {/* Right Content: Input + Button + Social */}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                // handle submit
-              }}
-              className="flex items-center gap-3 w-full md:w-auto"
-            >
-              {/* Input + Button */}
-              <div className="flex w-full md:w-96">
-                <input
-                  type="email"
-                  aria-label="Your email address"
-                  placeholder="Your email address"
-                  className="flex-1 border border-gray-300 px-4 py-3 text-sm rounded-l-md focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="bg-primary hover:bg-red-700 text-white px-6 py-3 text-sm font-semibold rounded-r-md"
-                >
-                  Subscribe
-                </button>
-              </div>
-
-              {/* Social Icons */}
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  aria-label="Follow on Facebook"
-                  className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90"
-                >
-                  f
-                </button>
-                <button
-                  type="button"
-                  aria-label="Follow on Twitter"
-                  className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90"
-                >
-                  t
-                </button>
-                <button
-                  type="button"
-                  aria-label="Follow on Instagram"
-                  className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90"
-                >
-                  ig
-                </button>
-              </div>
-            </form>
-          </div>
-        </section>
-      </footer>
-
-      <Footer />
     </section>
   );
 }
