@@ -6,22 +6,24 @@ import FeaturedProducts from "@/components/featuredProducts";
 import food1 from "../../public/images/insta1.png";
 import food2 from "../../public/images/insta2.png";
 import food3 from "../../public/images/insta3.png";
-import Footer from "@/components/footer";
+import shipping from "../../public/icons/shipping.svg";
+import payment from "../../public/icons/payment.svg";
+import call from "../../public/icons/call.svg";
 
 export default function Home() {
   const trustPoints = [
     {
-      icon: "🚚",
+      icon: shipping,
       title: "Free Shipping PAN India",
       desc: "Free shipping on prepaid order",
     },
     {
-      icon: "🔒",
+      icon: payment,
       title: "100% Secure Payment",
       desc: "We ensure secure payment",
     },
     {
-      icon: "📞",
+      icon: call,
       title: "24/7 Customer Support",
       desc: "We have 24/7 dedicated support",
     },
@@ -69,8 +71,8 @@ export default function Home() {
               key={idx}
               className="bg-white px-16 py-8 rounded-xl mt-7  shadow"
             >
-              <div className="text-3xl mb-2">{point.icon}</div>
-              <h3 className="font-semibold text-lg">{point.title}</h3>
+              <Image src={point.icon} alt={point.title} className="mx-auto " />
+              <h3 className="font-semibold text-lg mt-4">{point.title}</h3>
               <p className="text-lg text-gray-600 mt-1">{point.desc}</p>
             </div>
           ))}
