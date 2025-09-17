@@ -16,9 +16,9 @@ export default function Navbar() {
             <input
               type="text"
               placeholder="Search products..."
-              className="border px-2 py-1 rounded text-sm lg:w-1/5 w-full"
+              className=" border border-gray-300 px-2 py-1 lg:w-1/5 w-full text-sm  focus:outline-none"
             />
-            <button className="bg-primary text-white px-3 py-1 rounded text-sm">
+            <button className="bg-primary text-white px-2 py-1 rounded-r-[6px] ">
               Search
             </button>
           </div>
