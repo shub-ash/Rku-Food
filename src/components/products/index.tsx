@@ -70,7 +70,7 @@ const Products = () => {
           Introducing <span className="text-primary">Our Products</span>
         </h2>
 
-        <div className="flex justify-center space-x-4 mb-8">
+        <div className="flex justify-center space-x-4 mb-8 text-nowrap overflow-y-scroll">
           {categories.map((cat) => (
             <button
               key={cat}

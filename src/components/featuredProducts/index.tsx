@@ -49,7 +49,7 @@ const FeaturedProducts = () => {
         Featured <span className="text-primary">Products</span>
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 w-10/12 mx-auto gap-6 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 md:w-10/12 w-full  mx-auto gap-6 mb-8">
         {featured.map((product) => (
           <div
             key={product.id}

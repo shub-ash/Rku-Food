@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 py-10 bg-white w-10/12 mx-auto">
+      <section className="px-4 py-10 bg-white md:w-10/12 w-full mx-auto">
         <h2 className="text-4xl font-semibold text-center mb-6">
           Follow us on <span className="text-primary">Instagram</span>
         </h2>

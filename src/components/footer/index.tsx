@@ -74,7 +74,7 @@ const Footer = () => {
         </section>
       </footer>
       <footer className="w-full bg-[#1a1a1a]">
-        <div className="w-10/12 mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="md:w-10/12 w-full mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo / About */}
           <div className="md:col-span-1">
             <div className="mb-4">
